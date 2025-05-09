@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   cloudreve:
     container_name: cloudreve
@@ -19,7 +21,7 @@ services:
     image: p3terx/aria2-pro
     restart: unless-stopped
     environment:
-      - RPC_SECRET= KEJILION
+      - RPC_SECRET=KEJILION     # ⚠️ 注意：不能有空格
       - RPC_PORT=6800
     volumes:
       - ./aria2/config:/config
